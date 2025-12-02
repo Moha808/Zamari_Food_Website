@@ -1,0 +1,529 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { MessageCircle, ShoppingBag, Leaf, Award } from "lucide-react";
+import { Link } from "wouter";
+import { useState } from "react";
+
+import product1 from "@/assets/images/product-8.jpg";
+import product2 from "@/assets/images/product-2.jpg";
+import product3 from "@/assets/images/product-3.jpg";
+import product4 from "@/assets/images/product-4.jpg";
+import product5 from "@/assets/images/product-5.jpg";
+import product6 from "@/assets/images/product-6.jpg";
+import product7 from "@/assets/images/product-7.jpg";
+import product8 from "@/assets/images/product-1.jpg";
+import logo from "@/assets/images/logo.jpg";
+
+export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const products = [
+    {
+      id: 1,
+      name: "Lemon Grass Ginger & Lemon Tea",
+      category: "Teas",
+      price: "₦1,500",
+      description:
+        "Boost your energy with this refreshing blend of lemon grass, ginger, and lemon.",
+      benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
+      image: product1,
+      color: "from-yellow-50 to-orange-50",
+    },
+    {
+      id: 2,
+      name: "Achalina Fonio Flour",
+      category: "Grains & Flours",
+      price: "₦1,500",
+      description:
+        "A unique blend combining beetroot and coffee for a unique taste.",
+      benefits: ["Energy", "Heart Health", "Antioxidants"],
+      image: product2,
+      color: "from-green-50 to-emerald-50",
+    },
+    {
+      id: 3,
+      name: "Sweet Potato Flour",
+      category: "Grains & Flours",
+      price: "₦1,500",
+      description:
+        "Premium processed sweet potato flour for healthy baking and cooking.",
+      benefits: ["Gluten-Free", "Nutrient-Rich", "Versatile"],
+      image: product3,
+      color: "from-red-50 to-rose-50",
+    },
+    {
+      id: 4,
+      name: "Tamba Mix Flour",
+      category: "Grains & Flours",
+      price: "₦1,500",
+      description:
+        "Premium processed tamba mix flour for healthy baking and cooking.",
+      benefits: ["Nutrition", "Energy", "Wellness"],
+      image: product4,
+      color: "from-green-50 to-lime-50",
+    },
+    {
+      id: 5,
+      name: "Tigernut Powder Milk",
+      category: "Grains & Flours",
+      price: "₦2,500",
+      description:
+        "Premium processed tigernut powder milk for healthy baking and cooking.",
+      benefits: ["Gluten-Free", "Nutrient-Rich", "Versatile"],
+      image: product5,
+      color: "from-orange-50 to-amber-50",
+    },
+    {
+      id: 6,
+      name: "Date Powder",
+      category: "Powder",
+      price: "₦2,000",
+      description:
+        "Premium processed date powder for healthy baking and cooking.",
+      benefits: ["Gluten-Free", "High Fiber", "Traditional"],
+      image: product6,
+      color: "from-yellow-50 to-orange-50",
+    },
+    {
+      id: 7,
+      name: "Acha Grain Fonio",
+      category: "Grains & Flours",
+      price: "₦4,400",
+      description:
+        "Rich in vitamin C and minerals - perfect for smoothies and beverages.",
+      benefits: ["Vitamin C", "Immune Boost", "Natural"],
+      image: product7,
+      color: "from-amber-50 to-orange-50",
+    },
+    {
+      id: 8,
+      name: "Tigernut Powder",
+      category: "Powders",
+      price: "₦2,400",
+      description: "Nutritious tigernut powder for healthy drinks and recipes.",
+      benefits: ["Digestive Health", "Energy", "Natural"],
+      image: product8,
+      color: "from-amber-50 to-yellow-50",
+    },
+  ];
+
+  const categories = ["All", "Teas", "Grains & Flours", "Powders"];
+
+  const filteredProducts =
+    selectedCategory && selectedCategory !== "All"
+      ? products.filter(p => p.category === selectedCategory)
+      : products;
+
+  const whatsappNumber = "+234 803 564 9771"; // Replace with actual WhatsApp number
+  const whatsappMessage =
+    "Hello Zamari Foods! I'm interested in your products.";
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-orange-50">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-orange-100">
+        <div className="container py-4 flex items-center justify-between">
+          <Link href="/">
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img
+                src={logo}
+                alt="Zamari Foods Logo"
+                className="h-10 w-10 object-contain rounded-full"
+              />
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">
+                  Zamari Foods
+                </h1>
+                <p className="text-xs text-gray-600">
+                  Premium Nigerian Superfoods
+                </p>
+              </div>
+            </div>
+          </Link>
+          <div className="hidden md:flex items-center gap-6">
+            <Link
+              href="/"
+              className="text-orange-600 hover:text-orange-700 font-medium border-b-2 border-orange-600"
+            >
+              Home
+            </Link>
+            <Link
+              href="/products"
+              className="text-gray-700 hover:text-orange-600 font-medium"
+            >
+              Products
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-orange-600 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-orange-600 font-medium"
+            >
+              Contact
+            </Link>
+          </div>
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+          >
+            <MessageCircle size={18} />
+            <span className="hidden sm:inline">WhatsApp</span>
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="container py-12 md:py-20">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Nourish Your Festive Moments
+            </h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Discover authentic Nigerian superfoods processed with modern
+              standards. 100% natural, healthy, and affordable products for your
+              family.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-green-500 hover:bg-green-600">
+                  <MessageCircle className="mr-2" size={20} />
+                  Order via WhatsApp
+                </Button>
+              </a>
+              <Link href="/products">
+                <Button size="lg" variant="outline">
+                  <ShoppingBag className="mr-2" size={20} />
+                  Explore Products
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-100 to-green-100 rounded-2xl p-12 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-7xl mb-4">🌿</div>
+              <p className="text-gray-700 font-semibold">Premium Quality</p>
+              <p className="text-gray-600 text-sm">100% Natural Ingredients</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="bg-white py-12 border-y border-orange-100">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Leaf className="text-orange-600" size={32} />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">100% Natural</h3>
+              <p className="text-gray-600 text-sm">
+                No artificial additives or preservatives
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="text-green-600" size={32} />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Quality Assured</h3>
+              <p className="text-gray-600 text-sm">
+                Hygienically processed and packaged
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ShoppingBag className="text-yellow-600" size={32} />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Affordable</h3>
+              <p className="text-gray-600 text-sm">
+                Premium quality at competitive prices
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="container py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Premium Products
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Explore our carefully curated selection of natural Nigerian
+            superfoods, perfect for your health and wellness journey.
+          </p>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex gap-3 mb-8 justify-center flex-wrap">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat === "All" ? null : cat)}
+              className={`px-6 py-2 rounded-full font-medium transition-all ${
+                (selectedCategory === null && cat === "All") ||
+                selectedCategory === cat
+                  ? "bg-orange-600 text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredProducts.map(product => (
+            <Card
+              key={product.id}
+              className={`overflow-hidden hover:shadow-lg transition-shadow bg-gradient-to-br ${product.color}`}
+            >
+              <CardHeader className="p-0">
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="mb-2">
+                  <CardTitle className="text-lg mb-1">{product.name}</CardTitle>
+                  <CardDescription className="text-sm">
+                    {product.category}
+                  </CardDescription>
+                </div>
+                <p className="text-gray-700 text-sm mb-4 line-clamp-2">
+                  {product.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {product.benefits.map((benefit, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs bg-white bg-opacity-60 px-2 py-1 rounded-full text-gray-700"
+                    >
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-xl font-bold text-orange-600">
+                    {product.price}
+                  </span>
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`I'm interested in ${product.name}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="sm"
+                      className="bg-green-500 hover:bg-green-600"
+                    >
+                      Order
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Order Form Section */}
+      <section className="bg-gradient-to-r from-orange-50 to-yellow-50 py-16 border-t border-orange-200">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+              Place Your Order
+            </h2>
+            <p className="text-gray-600 text-center mb-8">
+              Fill out the form below or contact us via WhatsApp for quick
+              ordering
+            </p>
+
+            <form className="bg-white rounded-xl shadow-lg p-8 space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    placeholder="+234..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Delivery Address *
+                </label>
+                <textarea
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  rows={3}
+                  placeholder="Your delivery address"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Products Interested In *
+                </label>
+                <textarea
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  rows={3}
+                  placeholder="List the products and quantities you'd like to order..."
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Special Requests
+                </label>
+                <textarea
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  rows={2}
+                  placeholder="Any special requests or questions?"
+                />
+              </div>
+
+              <div className="flex gap-4">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="flex-1 bg-orange-600 hover:bg-orange-700"
+                >
+                  Submit Order
+                </Button>
+                <a
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button
+                    type="button"
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-green-500 text-green-600 hover:bg-green-50"
+                  >
+                    <MessageCircle className="mr-2" size={20} />
+                    Chat on WhatsApp
+                  </Button>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="font-bold mb-4">About Zamari Foods</h3>
+              <p className="text-gray-400 text-sm">
+                Premium Nigerian superfoods for healthy, affordable living.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Products</h3>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li>
+                  <a href="#products" className="hover:text-white">
+                    Specialty Teas
+                  </a>
+                </li>
+                <li>
+                  <a href="#products" className="hover:text-white">
+                    Grains & Flours
+                  </a>
+                </li>
+                <li>
+                  <a href="#products" className="hover:text-white">
+                    Powders
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Contact</h3>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li>Phone: +234 803 564 9771</li>
+                <li>Email: info@zamarifoods.com</li>
+                <li>Location: Jos, Nigeria</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Follow Us</h3>
+              <div className="flex gap-4">
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Facebook
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Instagram
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Twitter
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <p>
+              &copy; 2025 Zamari Foods Ltd. All rights reserved. | Authentic
+              Nigerian Superfoods
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
