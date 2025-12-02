@@ -31,7 +31,7 @@ export default function Products() {
       id: 1,
       name: "Lemon Grass Ginger & Lemon Tea",
       category: "Teas",
-      price: "₦1,500",
+      price: "₦2,500",
       description:
         "Boost your energy with this refreshing blend of lemon grass, ginger, and lemon.",
       longDescription:
@@ -69,7 +69,7 @@ export default function Products() {
       id: 3,
       name: "Sweet Potato Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4000",
       description:
         "A unique blend combining beetroot and coffee for a unique taste.",
       longDescription:
@@ -83,7 +83,7 @@ export default function Products() {
       id: 4,
       name: "Tamba Mix Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4000",
       description:
         "Experience the nutritional power of moringa leaf in every cup.",
       longDescription:
@@ -97,7 +97,7 @@ export default function Products() {
       id: 5,
       name: "Tiger Powder Milk",
       category: "Powders",
-      price: "₦2,500",
+      price: "₦3,500",
       description:
         "Premium processed tiger powder milk for healthy baking and cooking.",
       longDescription:
@@ -116,7 +116,7 @@ export default function Products() {
       id: 6,
       name: "Date Powder",
       category: "Powders",
-      price: "₦2,000",
+      price: "₦3,500",
       description:
         "Premium processed date powder for healthy baking and cooking.",
       longDescription:
@@ -135,7 +135,7 @@ export default function Products() {
       id: 7,
       name: "Acha Grain Fonio",
       category: "Grains & Flours",
-      price: "₦4,400",
+      price: "₦4,000",
       description:
         "Rich in vitamin C and minerals - perfect for smoothies and beverages.",
       longDescription:
@@ -147,14 +147,14 @@ export default function Products() {
     },
     {
       id: 8,
-      name: "Acha Grain Fonio",
-      category: "Grains & Flours",
-      price: "₦2,400",
+      name: "Tigernut Powder",
+      category: "Powder",
+      price: "₦1,800",
       description: "Nutritious tigernut powder for healthy drinks and recipes.",
       longDescription:
-        "Acha Grain Fonio is a nutrient-dense superfood made from dried tigernuts. Rich in fiber, resistant starch, and beneficial compounds, it's perfect for smoothies, drinks, and recipes. Supports digestive health and provides sustained energy.",
+        "Tigernut Powder is a nutrient-dense superfood made from dried tigernuts. Rich in fiber, resistant starch, and beneficial compounds, it's perfect for smoothies, drinks, and recipes. Supports digestive health and provides sustained energy.",
       benefits: ["Digestive Health", "Energy", "Natural", "Nutrient-Dense"],
-      ingredients: ["Acha Grain Fonio"],
+      ingredients: ["Tigernut Powder"],
       image: product8,
       color: "from-amber-50 to-yellow-50",
     },

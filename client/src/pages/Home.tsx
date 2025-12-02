@@ -28,7 +28,7 @@ export default function Home() {
       id: 1,
       name: "Lemon Grass Ginger & Lemon Tea",
       category: "Teas",
-      price: "₦1,500",
+      price: "₦2,500",
       description:
         "Boost your energy with this refreshing blend of lemon grass, ginger, and lemon.",
       benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
@@ -50,7 +50,7 @@ export default function Home() {
       id: 3,
       name: "Sweet Potato Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4,000",
       description:
         "Premium processed sweet potato flour for healthy baking and cooking.",
       benefits: ["Gluten-Free", "Nutrient-Rich", "Versatile"],
@@ -61,7 +61,7 @@ export default function Home() {
       id: 4,
       name: "Tamba Mix Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4,000",
       description:
         "Premium processed tamba mix flour for healthy baking and cooking.",
       benefits: ["Nutrition", "Energy", "Wellness"],
@@ -72,7 +72,7 @@ export default function Home() {
       id: 5,
       name: "Tigernut Powder Milk",
       category: "Grains & Flours",
-      price: "₦2,500",
+      price: "₦3,500",
       description:
         "Premium processed tigernut powder milk for healthy baking and cooking.",
       benefits: ["Gluten-Free", "Nutrient-Rich", "Versatile"],
@@ -83,7 +83,7 @@ export default function Home() {
       id: 6,
       name: "Date Powder",
       category: "Powder",
-      price: "₦2,000",
+      price: "₦3,500",
       description:
         "Premium processed date powder for healthy baking and cooking.",
       benefits: ["Gluten-Free", "High Fiber", "Traditional"],
@@ -94,7 +94,7 @@ export default function Home() {
       id: 7,
       name: "Acha Grain Fonio",
       category: "Grains & Flours",
-      price: "₦4,400",
+      price: "₦4,000",
       description:
         "Rich in vitamin C and minerals - perfect for smoothies and beverages.",
       benefits: ["Vitamin C", "Immune Boost", "Natural"],
@@ -105,7 +105,7 @@ export default function Home() {
       id: 8,
       name: "Tigernut Powder",
       category: "Powders",
-      price: "₦2,400",
+      price: "₦1,800",
       description: "Nutritious tigernut powder for healthy drinks and recipes.",
       benefits: ["Digestive Health", "Energy", "Natural"],
       image: product8,
