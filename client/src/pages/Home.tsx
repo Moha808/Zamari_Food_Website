@@ -17,7 +17,20 @@ import product4 from "@/assets/images/product-4.jpg";
 import product5 from "@/assets/images/product-5.jpg";
 import product6 from "@/assets/images/product-6.jpg";
 import product7 from "@/assets/images/product-7.jpg";
-import product8 from "@/assets/images/product-1.jpg";
+import product8 from "@/assets/images/product-5.jpg";
+// import product9 from "@/assets/images/product-5.jpg";
+// import product10 from "@/assets/images/product-5.jpg";
+import product11 from "@/assets/images/product-11.jpg";
+import product12 from "@/assets/images/product-18.jpg";
+import product13 from "@/assets/images/product-13.jpg";
+import product14 from "@/assets/images/product-15.jpg";
+import product15 from "@/assets/images/product-9.jpg";
+import product17 from "@/assets/images/product-17.jpg";
+import product16 from "@/assets/images/product-16.jpg";
+import product21 from "@/assets/images/product-10.jpg";
+import product22 from "@/assets/images/product-19.jpg";
+import product23 from "@/assets/images/product-14.jpg";
+import product24 from "@/assets/images/product-12.jpg";
 import logo from "@/assets/images/logo.jpg";
 
 export default function Home() {
@@ -26,11 +39,11 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      name: "Lemon Grass Ginger & Lemon Tea",
+      name: "Lemon Grass Tea",
       category: "Teas",
       price: "₦2,500",
       description:
-        "Boost your energy with this refreshing blend of lemon grass, ginger, and lemon.",
+        "Boost your energy with this refreshing blend of lemon grass.",
       benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
       image: product1,
       color: "from-yellow-50 to-orange-50",
@@ -41,14 +54,14 @@ export default function Home() {
       category: "Grains & Flours",
       price: "₦1,500",
       description:
-        "A unique blend combining beetroot and coffee for a unique taste.",
-      benefits: ["Energy", "Heart Health", "Antioxidants"],
+         "Nutritious acha-based cereal mix ideal for both children and adults.",
+      benefits: ["Energy", "Easy to Digest", "Nutrient-Rich"],
       image: product2,
       color: "from-green-50 to-emerald-50",
     },
     {
       id: 3,
-      name: "Sweet Potato Flour",
+      name: "Sweet Potato Flour 1kg",
       category: "Grains & Flours",
       price: "₦4,000",
       description:
@@ -59,7 +72,7 @@ export default function Home() {
     },
     {
       id: 4,
-      name: "Tamba Mix Flour",
+      name: "Tamba Mix Flour 1kg",
       category: "Grains & Flours",
       price: "₦4,000",
       description:
@@ -70,18 +83,17 @@ export default function Home() {
     },
     {
       id: 5,
-      name: "Tigernut Powder Milk",
-      category: "Grains & Flours",
+      name: "Tigernut Powder 500g",
+      category: "Powders",
       price: "₦3,500",
-      description:
-        "Premium processed tigernut powder milk for healthy baking and cooking.",
-      benefits: ["Gluten-Free", "Nutrient-Rich", "Versatile"],
+      description: "Nutritious tigernut powder for healthy drinks and recipes.",
+      benefits: ["Digestive Health", "Energy", "Natural"],
       image: product5,
       color: "from-orange-50 to-amber-50",
     },
     {
       id: 6,
-      name: "Date Powder",
+      name: "Date Powder 500g",
       category: "Powder",
       price: "₦3,500",
       description:
@@ -92,18 +104,18 @@ export default function Home() {
     },
     {
       id: 7,
-      name: "Acha Grain Fonio",
+      name: "Acha Grain Fonio 1kg",
       category: "Grains & Flours",
       price: "₦4,000",
       description:
-        "Rich in vitamin C and minerals - perfect for smoothies and beverages.",
-      benefits: ["Vitamin C", "Immune Boost", "Natural"],
+         "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
       image: product7,
       color: "from-amber-50 to-orange-50",
     },
     {
       id: 8,
-      name: "Tigernut Powder",
+      name: "Tigernut Powder 250g",
       category: "Powders",
       price: "₦1,800",
       description: "Nutritious tigernut powder for healthy drinks and recipes.",
@@ -111,6 +123,182 @@ export default function Home() {
       image: product8,
       color: "from-amber-50 to-yellow-50",
     },
+  //   {
+  //   id: 9,
+  //   name: "Ginger Powder 75g",
+  //   category: "Powders",
+  //   price: "₦2,000",
+  //   description:
+  //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+  //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+  //   // image: product9,
+  //   color: "from-yellow-50 to-orange-50",
+  // },
+  // {
+  //   id: 10,
+  //   name: "Ginger Powder 200g",
+  //   category: "Powders",
+  //   price: "₦4,000",
+  //   description:
+  //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+  //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+  //   // image: product10,
+  //   color: "from-yellow-50 to-orange-50",
+  // },
+  {
+    id: 11,
+    name: "Zobeet Pure Tea",
+    category: "Teas",
+    price: "₦2,500",
+    description:
+      "A refreshing and natural herbal tea blend offering immune and antioxidant support.",
+    benefits: ["Immune Boost", "Antioxidants", "Wellness"],
+    image: product11,
+    color: "from-purple-50 to-pink-50",
+  },
+  {
+    id: 12,
+    name: "Cobeet Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A nutritious blend made from beetroot for energy and heart support.",
+    benefits: ["Energy", "Heart Health", "Antioxidants"],
+    image: product12,
+    color: "from-red-50 to-pink-50",
+  },
+  {
+    id: 13,
+    name: "Cinnamon Plus Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A healthy cinnamon tea blend that supports metabolism and blood sugar balance.",
+    benefits: ["Metabolism Support", "Blood Sugar Balance", "Antioxidants"],
+    image: product13,
+    color: "from-orange-50 to-red-50",
+  },
+  {
+    id: 14,
+    name: "Ginseng Plus Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A revitalizing ginseng tea that boosts energy, focus, and wellness.",
+    benefits: ["Energy", "Mental Focus", "Immune Support"],
+    image: product14,
+    color: "from-yellow-50 to-amber-50",
+  },
+   {
+    id: 15,
+    name: "Black Seed Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A powerful herbal tea infused with black seed for wellness and immunity.",
+    benefits: ["Immune Boost", "Respiratory Health", "Antioxidants"],
+    image: product15,
+    color: "from-gray-50 to-slate-50",
+  },
+  //  {
+  //   id: 16,
+  //   name: "Rich B Tea",
+  //   category: "Teas",
+  //   price: "₦4,000",
+  //   description:
+  //     "A premium herbal tea blend formulated for vitality and overall wellness.",
+  //   benefits: ["Energy", "Immune Support", "Wellness"],
+  //   // image: product16,
+  //   color: "from-blue-50 to-indigo-50",
+  // },
+   {
+    id: 17,
+    name: "Green Vervain Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A calming herbal tea traditionally used for relaxation and stress relief.",
+    benefits: ["Relaxation", "Stress Relief", "Sleep Support"],
+    image: product17,
+    color: "from-green-50 to-emerald-50",
+  },
+  {
+      id: 18,
+      name: "Tamba Mix Flour 500g",
+      category: "Grains & Flours",
+      price: "₦2,000",
+      description:
+        "Premium processed tamba mix flour for healthy baking and cooking.",
+      benefits: ["Nutrition", "Energy", "Wellness"],
+      image: product4,
+      color: "from-green-50 to-lime-50",
+    },
+    {
+     id: 19,
+      name: "Acha Flour Fonio 1kg",
+      category: "Grains & Flours",
+      price: "₦4,500",
+      description:
+         "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
+      image: product7,
+      color: "from-amber-50 to-orange-50",
+    },
+    {
+    id: 20,
+    name: "Lemon Grass Ginger & Lemon Tea",
+    category: "Teas",
+    price: "₦2,500",
+    description:
+      "Boost your energy with this refreshing blend of lemongrass, ginger, and lemon.",
+    benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
+    image: product16,
+    color: "from-yellow-50 to-orange-50",
+  },
+  {
+    id: 21,
+    name: "Turmeric Tea",
+    category: "Teas",
+    price: "₦2,800",
+    description:
+      "A soothing blend of turmeric and spices that supports overall wellness and inflammation relief.",
+    benefits: ["Anti-Inflammatory", "Boosts Immunity", "Supports Digestion"],
+    image: product21,
+    color: "from-yellow-100 to-orange-200",
+  },
+   {
+    id: 22,
+    name: "Moringa Tea",
+    category: "Teas",
+    price: "₦2,500",
+    description:
+      "A nutrient-rich tea made from moringa leaves, known for its high antioxidant content and revitalizing effects.",
+    benefits: ["Rich in Antioxidants", "Energy Boost", "Supports Metabolism"],
+    image: product22,
+    color: "from-green-100 to-green-300",
+  },
+   {
+    id: 23,
+    name: "Dandelion Tea",
+    category: "Teas",
+    price: "₦2,600",
+    description:
+      "A herbal tea with a slightly earthy flavor that supports liver detoxification and digestive health.",
+    benefits: ["Liver Detox", "Digestive Aid", "Supports Weight Management"],
+    image: product23,
+    color: "from-yellow-50 to-green-100",
+  },
+   {
+    id: 24,
+    name: "Noni Tea",
+    category: "Teas",
+    price: "₦3,000",
+    description:
+      "A tropical tea made from noni fruit, known for its immune-boosting and overall wellness properties.",
+    benefits: ["Immune Support", "Anti-Inflammatory", "Overall Wellness"],
+    image: product24,
+    color: "from-green-200 to-green-400",
+  },
   ];
 
   const categories = ["All", "Teas", "Grains & Flours", "Powders"];
