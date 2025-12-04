@@ -146,12 +146,12 @@ export default function Contact() {
               <p className="text-gray-700 mb-4">
                 Send us your inquiries via email
               </p>
-              <a href="mailto:info@zamarifoods.com">
+              <a href="mailto:zamarifoods@gmail.com">
                 <Button
                   variant="outline"
                   className="w-full border-blue-300 text-blue-600 hover:bg-blue-50"
                 >
-                  info@zamarifoods.com
+                  zamarifoods@gmail.com
                 </Button>
               </a>
             </CardContent>
@@ -467,7 +467,7 @@ export default function Contact() {
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="text-gray-400 text-sm space-y-2">
                 <li>Phone: +234 803 564 9771</li>
-                <li>Email: info@zamarifoods.com</li>
+                <li>Email: zamarifoods@gmail.com</li>
                 <li>Location: Jos, Nigeria</li>
               </ul>
             </div>
