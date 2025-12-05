@@ -13,6 +13,8 @@ import {
   Award,
   ChevronLeft,
   ChevronRight,
+  Menu,
+  X,
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
@@ -49,6 +51,7 @@ import hero4 from "@/assets/images/hero-4.png";
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Carousel data
   const carouselSlides = [
@@ -396,6 +399,8 @@ export default function Home() {
               </div>
             </div>
           </Link>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
@@ -422,16 +427,65 @@ export default function Home() {
               Contact
             </Link>
           </div>
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
-          >
-            <MessageCircle size={18} />
-            <span className="hidden sm:inline">WhatsApp</span>
-          </a>
+
+          {/* WhatsApp Button & Mobile Menu Toggle */}
+          <div className="flex items-center gap-3">
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <MessageCircle size={18} />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-orange-600"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-orange-100 shadow-lg">
+            <div className="container py-4 flex flex-col gap-4">
+              <Link
+                href="/"
+                className="text-orange-600 hover:text-orange-700 font-medium py-2 border-l-4 border-orange-600 pl-3"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/products"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Products
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Carousel Section */}
@@ -733,7 +787,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   type="submit"
                   size="lg"

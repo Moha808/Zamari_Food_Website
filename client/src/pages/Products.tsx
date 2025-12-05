@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useState } from "react";
-import { MessageCircle, Search, Filter } from "lucide-react";
+import { MessageCircle, Search, Filter, Menu, X } from "lucide-react";
 
 import product1 from "@/assets/images/product-8.jpg";
 import product2 from "@/assets/images/product-2.jpg";
@@ -35,6 +35,7 @@ import heroImage from "@/assets/images/hero-3.png";
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const whatsappNumber = "+234 803 564 9771";
 
@@ -467,6 +468,8 @@ export default function Products() {
               </div>
             </div>
           </Link>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
@@ -493,16 +496,65 @@ export default function Products() {
               Contact
             </Link>
           </div>
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
-          >
-            <MessageCircle size={18} />
-            <span className="hidden sm:inline">WhatsApp</span>
-          </a>
+
+          {/* WhatsApp Button & Mobile Menu Toggle */}
+          <div className="flex items-center gap-3">
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <MessageCircle size={18} />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-orange-600"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-orange-100 shadow-lg">
+            <div className="container py-4 flex flex-col gap-4">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/products"
+                className="text-orange-600 hover:text-orange-700 font-medium py-2 border-l-4 border-orange-600 pl-3"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Products
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-orange-600 font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section with Image */}
@@ -514,7 +566,7 @@ export default function Products() {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-        
+
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container">
