@@ -9,6 +9,7 @@ import {
 import { Link } from "wouter";
 import { MessageCircle, Target, Heart, Globe } from "lucide-react";
 import logo from "@/assets/images/logo.jpg";
+import heroImage from "@/assets/images/hero-2.png";
 
 export default function About() {
   const whatsappNumber = "+234 803 564 9771";
@@ -75,16 +76,29 @@ export default function About() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="container py-12 md:py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About Zamari Foods
-          </h1>
-          <p className="text-lg text-gray-700 mb-8">
-            Bringing the authentic taste and nutrition of traditional Nigerian
-            superfoods to modern tables, one product at a time.
-          </p>
+      {/* Hero Section with Image */}
+      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img
+          src={heroImage}
+          alt="About Zamari Foods"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center text-white">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+                About Zamari Foods
+              </h1>
+              <p className="text-lg md:text-xl drop-shadow-md">
+                Bringing the authentic taste and nutrition of traditional
+                Nigerian superfoods to modern tables, one product at a time.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

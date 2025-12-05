@@ -10,6 +10,7 @@ import { Link } from "wouter";
 import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/images/logo.jpg";
+import heroImage from "@/assets/images/hero-4.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -100,13 +101,30 @@ export default function Contact() {
         </div>
       </nav>
 
-      {/* Header */}
-      <section className="container py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-        <p className="text-lg text-gray-700 max-w-2xl">
-          Have questions about our products or want to place a bulk order? We'd
-          love to hear from you. Reach out using any of the methods below.
-        </p>
+      {/* Hero Section with Image */}
+      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img
+          src={heroImage}
+          alt="Contact Us"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+        
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center text-white">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                Contact Us
+              </h1>
+              <p className="text-lg md:text-xl drop-shadow-md">
+                Have questions about our products or want to place a bulk order? We'd
+                love to hear from you. Reach out using any of the methods below.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Info Cards */}

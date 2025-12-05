@@ -6,9 +6,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MessageCircle, ShoppingBag, Leaf, Award } from "lucide-react";
+import {
+  MessageCircle,
+  ShoppingBag,
+  Leaf,
+  Award,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import product1 from "@/assets/images/product-8.jpg";
 import product2 from "@/assets/images/product-2.jpg";
@@ -33,8 +40,63 @@ import product23 from "@/assets/images/product-14.jpg";
 import product24 from "@/assets/images/product-12.jpg";
 import logo from "@/assets/images/logo.jpg";
 
+// Hero carousel images (using existing product images)
+import hero1 from "@/assets/images/hero-1.png";
+import hero2 from "@/assets/images/hero-2.png";
+import hero3 from "@/assets/images/hero-3.png";
+import hero4 from "@/assets/images/hero-4.png";
+
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Carousel data
+  const carouselSlides = [
+    {
+      image: hero1,
+      title: "Nourish Your Festive Moments",
+      subtitle:
+        "Discover authentic Nigerian superfoods processed with modern standards",
+    },
+    {
+      image: hero2,
+      title: "Pure Natural Goodness",
+      subtitle: "100% natural ingredients from Nigerian farms to your table",
+    },
+    {
+      image: hero3,
+      title: "Premium Herbal Teas",
+      subtitle: "Experience the healing power of traditional African herbs",
+    },
+    {
+      image: hero4,
+      title: "Farm Fresh Quality",
+      subtitle: "Supporting local farmers while delivering excellence",
+    },
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % carouselSlides.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide(prev => (prev + 1) % carouselSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      prev => (prev - 1 + carouselSlides.length) % carouselSlides.length
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   const products = [
     {
@@ -54,7 +116,7 @@ export default function Home() {
       category: "Grains & Flours",
       price: "₦1,500",
       description:
-         "Nutritious acha-based cereal mix ideal for both children and adults.",
+        "Nutritious acha-based cereal mix ideal for both children and adults.",
       benefits: ["Energy", "Easy to Digest", "Nutrient-Rich"],
       image: product2,
       color: "from-green-50 to-emerald-50",
@@ -108,7 +170,7 @@ export default function Home() {
       category: "Grains & Flours",
       price: "₦4,000",
       description:
-         "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+        "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
       benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
       image: product7,
       color: "from-amber-50 to-orange-50",
@@ -123,106 +185,106 @@ export default function Home() {
       image: product8,
       color: "from-amber-50 to-yellow-50",
     },
-  //   {
-  //   id: 9,
-  //   name: "Ginger Powder 75g",
-  //   category: "Powders",
-  //   price: "₦2,000",
-  //   description:
-  //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
-  //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
-  //   // image: product9,
-  //   color: "from-yellow-50 to-orange-50",
-  // },
-  // {
-  //   id: 10,
-  //   name: "Ginger Powder 200g",
-  //   category: "Powders",
-  //   price: "₦4,000",
-  //   description:
-  //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
-  //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
-  //   // image: product10,
-  //   color: "from-yellow-50 to-orange-50",
-  // },
-  {
-    id: 11,
-    name: "Zobeet Pure Tea",
-    category: "Teas",
-    price: "₦2,500",
-    description:
-      "A refreshing and natural herbal tea blend offering immune and antioxidant support.",
-    benefits: ["Immune Boost", "Antioxidants", "Wellness"],
-    image: product11,
-    color: "from-purple-50 to-pink-50",
-  },
-  {
-    id: 12,
-    name: "Cobeet Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A nutritious blend made from beetroot for energy and heart support.",
-    benefits: ["Energy", "Heart Health", "Antioxidants"],
-    image: product12,
-    color: "from-red-50 to-pink-50",
-  },
-  {
-    id: 13,
-    name: "Cinnamon Plus Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A healthy cinnamon tea blend that supports metabolism and blood sugar balance.",
-    benefits: ["Metabolism Support", "Blood Sugar Balance", "Antioxidants"],
-    image: product13,
-    color: "from-orange-50 to-red-50",
-  },
-  {
-    id: 14,
-    name: "Ginseng Plus Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A revitalizing ginseng tea that boosts energy, focus, and wellness.",
-    benefits: ["Energy", "Mental Focus", "Immune Support"],
-    image: product14,
-    color: "from-yellow-50 to-amber-50",
-  },
-   {
-    id: 15,
-    name: "Black Seed Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A powerful herbal tea infused with black seed for wellness and immunity.",
-    benefits: ["Immune Boost", "Respiratory Health", "Antioxidants"],
-    image: product15,
-    color: "from-gray-50 to-slate-50",
-  },
-  //  {
-  //   id: 16,
-  //   name: "Rich B Tea",
-  //   category: "Teas",
-  //   price: "₦4,000",
-  //   description:
-  //     "A premium herbal tea blend formulated for vitality and overall wellness.",
-  //   benefits: ["Energy", "Immune Support", "Wellness"],
-  //   // image: product16,
-  //   color: "from-blue-50 to-indigo-50",
-  // },
-   {
-    id: 17,
-    name: "Green Vervain Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A calming herbal tea traditionally used for relaxation and stress relief.",
-    benefits: ["Relaxation", "Stress Relief", "Sleep Support"],
-    image: product17,
-    color: "from-green-50 to-emerald-50",
-  },
-  {
+    //   {
+    //   id: 9,
+    //   name: "Ginger Powder 75g",
+    //   category: "Powders",
+    //   price: "₦2,000",
+    //   description:
+    //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+    //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+    //   // image: product9,
+    //   color: "from-yellow-50 to-orange-50",
+    // },
+    // {
+    //   id: 10,
+    //   name: "Ginger Powder 200g",
+    //   category: "Powders",
+    //   price: "₦4,000",
+    //   description:
+    //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+    //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+    //   // image: product10,
+    //   color: "from-yellow-50 to-orange-50",
+    // },
+    {
+      id: 11,
+      name: "Zobeet Pure Tea",
+      category: "Teas",
+      price: "₦2,500",
+      description:
+        "A refreshing and natural herbal tea blend offering immune and antioxidant support.",
+      benefits: ["Immune Boost", "Antioxidants", "Wellness"],
+      image: product11,
+      color: "from-purple-50 to-pink-50",
+    },
+    {
+      id: 12,
+      name: "Cobeet Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A nutritious blend made from beetroot for energy and heart support.",
+      benefits: ["Energy", "Heart Health", "Antioxidants"],
+      image: product12,
+      color: "from-red-50 to-pink-50",
+    },
+    {
+      id: 13,
+      name: "Cinnamon Plus Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A healthy cinnamon tea blend that supports metabolism and blood sugar balance.",
+      benefits: ["Metabolism Support", "Blood Sugar Balance", "Antioxidants"],
+      image: product13,
+      color: "from-orange-50 to-red-50",
+    },
+    {
+      id: 14,
+      name: "Ginseng Plus Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A revitalizing ginseng tea that boosts energy, focus, and wellness.",
+      benefits: ["Energy", "Mental Focus", "Immune Support"],
+      image: product14,
+      color: "from-yellow-50 to-amber-50",
+    },
+    {
+      id: 15,
+      name: "Black Seed Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A powerful herbal tea infused with black seed for wellness and immunity.",
+      benefits: ["Immune Boost", "Respiratory Health", "Antioxidants"],
+      image: product15,
+      color: "from-gray-50 to-slate-50",
+    },
+    //  {
+    //   id: 16,
+    //   name: "Rich B Tea",
+    //   category: "Teas",
+    //   price: "₦4,000",
+    //   description:
+    //     "A premium herbal tea blend formulated for vitality and overall wellness.",
+    //   benefits: ["Energy", "Immune Support", "Wellness"],
+    //   // image: product16,
+    //   color: "from-blue-50 to-indigo-50",
+    // },
+    {
+      id: 17,
+      name: "Green Vervain Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A calming herbal tea traditionally used for relaxation and stress relief.",
+      benefits: ["Relaxation", "Stress Relief", "Sleep Support"],
+      image: product17,
+      color: "from-green-50 to-emerald-50",
+    },
+    {
       id: 18,
       name: "Tamba Mix Flour 500g",
       category: "Grains & Flours",
@@ -234,71 +296,71 @@ export default function Home() {
       color: "from-green-50 to-lime-50",
     },
     {
-     id: 19,
+      id: 19,
       name: "Acha Flour Fonio 1kg",
       category: "Grains & Flours",
       price: "₦4,500",
       description:
-         "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+        "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
       benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
       image: product7,
       color: "from-amber-50 to-orange-50",
     },
     {
-    id: 20,
-    name: "Lemon Grass Ginger & Lemon Tea",
-    category: "Teas",
-    price: "₦2,500",
-    description:
-      "Boost your energy with this refreshing blend of lemongrass, ginger, and lemon.",
-    benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
-    image: product16,
-    color: "from-yellow-50 to-orange-50",
-  },
-  {
-    id: 21,
-    name: "Turmeric Tea",
-    category: "Teas",
-    price: "₦2,800",
-    description:
-      "A soothing blend of turmeric and spices that supports overall wellness and inflammation relief.",
-    benefits: ["Anti-Inflammatory", "Boosts Immunity", "Supports Digestion"],
-    image: product21,
-    color: "from-yellow-100 to-orange-200",
-  },
-   {
-    id: 22,
-    name: "Moringa Tea",
-    category: "Teas",
-    price: "₦2,500",
-    description:
-      "A nutrient-rich tea made from moringa leaves, known for its high antioxidant content and revitalizing effects.",
-    benefits: ["Rich in Antioxidants", "Energy Boost", "Supports Metabolism"],
-    image: product22,
-    color: "from-green-100 to-green-300",
-  },
-   {
-    id: 23,
-    name: "Dandelion Tea",
-    category: "Teas",
-    price: "₦2,600",
-    description:
-      "A herbal tea with a slightly earthy flavor that supports liver detoxification and digestive health.",
-    benefits: ["Liver Detox", "Digestive Aid", "Supports Weight Management"],
-    image: product23,
-    color: "from-yellow-50 to-green-100",
-  },
-   {
-    id: 24,
-    name: "Noni Tea",
-    category: "Teas",
-    price: "₦3,000",
-    description:
-      "A tropical tea made from noni fruit, known for its immune-boosting and overall wellness properties.",
-    benefits: ["Immune Support", "Anti-Inflammatory", "Overall Wellness"],
-    image: product24,
-    color: "from-green-200 to-green-400",
-  },
+      id: 20,
+      name: "Lemon Grass Ginger & Lemon Tea",
+      category: "Teas",
+      price: "₦2,500",
+      description:
+        "Boost your energy with this refreshing blend of lemongrass, ginger, and lemon.",
+      benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
+      image: product16,
+      color: "from-yellow-50 to-orange-50",
+    },
+    {
+      id: 21,
+      name: "Turmeric Tea",
+      category: "Teas",
+      price: "₦2,800",
+      description:
+        "A soothing blend of turmeric and spices that supports overall wellness and inflammation relief.",
+      benefits: ["Anti-Inflammatory", "Boosts Immunity", "Supports Digestion"],
+      image: product21,
+      color: "from-yellow-100 to-orange-200",
+    },
+    {
+      id: 22,
+      name: "Moringa Tea",
+      category: "Teas",
+      price: "₦2,500",
+      description:
+        "A nutrient-rich tea made from moringa leaves, known for its high antioxidant content and revitalizing effects.",
+      benefits: ["Rich in Antioxidants", "Energy Boost", "Supports Metabolism"],
+      image: product22,
+      color: "from-green-100 to-green-300",
+    },
+    {
+      id: 23,
+      name: "Dandelion Tea",
+      category: "Teas",
+      price: "₦2,600",
+      description:
+        "A herbal tea with a slightly earthy flavor that supports liver detoxification and digestive health.",
+      benefits: ["Liver Detox", "Digestive Aid", "Supports Weight Management"],
+      image: product23,
+      color: "from-yellow-50 to-green-100",
+    },
+    {
+      id: 24,
+      name: "Noni Tea",
+      category: "Teas",
+      price: "₦3,000",
+      description:
+        "A tropical tea made from noni fruit, known for its immune-boosting and overall wellness properties.",
+      benefits: ["Immune Support", "Anti-Inflammatory", "Overall Wellness"],
+      image: product24,
+      color: "from-green-200 to-green-400",
+    },
   ];
 
   const categories = ["All", "Teas", "Grains & Flours", "Powders"];
@@ -372,44 +434,94 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="container py-12 md:py-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nourish Your Festive Moments
-            </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Discover authentic Nigerian superfoods processed with modern
-              standards. 100% natural, healthy, and affordable products for your
-              family.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="bg-green-500 hover:bg-green-600">
-                  <MessageCircle className="mr-2" size={20} />
-                  Order via WhatsApp
-                </Button>
-              </a>
-              <Link href="/products">
-                <Button size="lg" variant="outline">
-                  <ShoppingBag className="mr-2" size={20} />
-                  Explore Products
-                </Button>
-              </Link>
+      {/* Hero Carousel Section */}
+      <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+        {/* Carousel Images */}
+        <div className="relative w-full h-full">
+          {carouselSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+              {/* Lighter overlay for better image visibility */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
+            </div>
+          ))}
+        </div>
+
+        {/* Carousel Content Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center text-white">
+              <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                {carouselSlides[currentSlide].title}
+              </h2>
+              <p className="text-lg md:text-xl mb-8 drop-shadow-md">
+                {carouselSlides[currentSlide].subtitle}
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap">
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-green-500 hover:bg-green-600">
+                    <MessageCircle className="mr-2" size={20} />
+                    Order via WhatsApp
+                  </Button>
+                </a>
+                <Link href="/products">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-white bg-opacity-90 hover:bg-opacity-100"
+                  >
+                    <ShoppingBag className="mr-2" size={20} />
+                    Explore Products
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-orange-100 to-green-100 rounded-2xl p-12 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-7xl mb-4">🌿</div>
-              <p className="text-gray-700 font-semibold">Premium Quality</p>
-              <p className="text-gray-600 text-sm">100% Natural Ingredients</p>
-            </div>
-          </div>
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-900 p-3 rounded-full transition-all z-10"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-900 p-3 rounded-full transition-all z-10"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} />
+        </button>
+
+        {/* Dot Indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {carouselSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide
+                  ? "bg-white w-8"
+                  : "bg-white bg-opacity-50 hover:bg-opacity-75"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
