@@ -27,8 +27,8 @@ import product5 from "@/assets/images/product-5.jpg";
 import product6 from "@/assets/images/product-6.jpg";
 import product7 from "@/assets/images/product-7.jpg";
 import product8 from "@/assets/images/product-5.jpg";
-// import product9 from "@/assets/images/product-5.jpg";
-// import product10 from "@/assets/images/product-5.jpg";
+import product9 from "@/assets/images/product-22.jpeg";
+import product10 from "@/assets/images/product-22.jpeg";
 import product11 from "@/assets/images/product-11.jpg";
 import product12 from "@/assets/images/product-18.jpg";
 import product13 from "@/assets/images/product-13.jpg";
@@ -40,6 +40,7 @@ import product21 from "@/assets/images/product-10.jpg";
 import product22 from "@/assets/images/product-19.jpg";
 import product23 from "@/assets/images/product-14.jpg";
 import product24 from "@/assets/images/product-12.jpg";
+import product25 from "@/assets/images/product-23.jpeg";
 import logo from "@/assets/images/logo.jpg";
 
 // Hero carousel images (using existing product images)
@@ -188,28 +189,28 @@ export default function Home() {
       image: product8,
       color: "from-amber-50 to-yellow-50",
     },
-    //   {
-    //   id: 9,
-    //   name: "Ginger Powder 75g",
-    //   category: "Powders",
-    //   price: "₦2,000",
-    //   description:
-    //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
-    //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
-    //   // image: product9,
-    //   color: "from-yellow-50 to-orange-50",
-    // },
-    // {
-    //   id: 10,
-    //   name: "Ginger Powder 200g",
-    //   category: "Powders",
-    //   price: "₦4,000",
-    //   description:
-    //     "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
-    //   benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
-    //   // image: product10,
-    //   color: "from-yellow-50 to-orange-50",
-    // },
+      {
+      id: 9,
+      name: "Ginger Powder 75g",
+      category: "Powders",
+      price: "₦2,000",
+      description:
+        "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+      benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+      image: product9,
+      color: "from-yellow-50 to-orange-50",
+    },
+    {
+      id: 10,
+      name: "Ginger Powder 200g",
+      category: "Powders",
+      price: "₦4,000",
+      description:
+        "Pure dried ginger powder perfect for seasoning, drinks, and remedies.",
+      benefits: ["Digestive Health", "Anti-inflammatory", "Energy Boost"],
+      image: product10,
+      color: "from-yellow-50 to-orange-50",
+    },
     {
       id: 11,
       name: "Zobeet Pure Tea",
@@ -265,17 +266,17 @@ export default function Home() {
       image: product15,
       color: "from-gray-50 to-slate-50",
     },
-    //  {
-    //   id: 16,
-    //   name: "Rich B Tea",
-    //   category: "Teas",
-    //   price: "₦4,000",
-    //   description:
-    //     "A premium herbal tea blend formulated for vitality and overall wellness.",
-    //   benefits: ["Energy", "Immune Support", "Wellness"],
-    //   // image: product16,
-    //   color: "from-blue-50 to-indigo-50",
-    // },
+     {
+      id: 16,
+      name: "Rich B Tea",
+      category: "Teas",
+      price: "₦4,000",
+      description:
+        "A premium herbal tea blend formulated for vitality and overall wellness.",
+      benefits: ["Energy", "Immune Support", "Wellness"],
+      image: product25,
+      color: "from-blue-50 to-indigo-50",
+    },
     {
       id: 17,
       name: "Green Vervain Tea",
@@ -313,7 +314,7 @@ export default function Home() {
       id: 20,
       name: "Lemon Grass Ginger & Lemon Tea",
       category: "Teas",
-      price: "₦2,500",
+      price: "₦3,500",
       description:
         "Boost your energy with this refreshing blend of lemongrass, ginger, and lemon.",
       benefits: ["Energy Boost", "Immune Support", "Digestive Health"],
@@ -324,7 +325,7 @@ export default function Home() {
       id: 21,
       name: "Turmeric Tea",
       category: "Teas",
-      price: "₦2,800",
+      price: "₦2,500",
       description:
         "A soothing blend of turmeric and spices that supports overall wellness and inflammation relief.",
       benefits: ["Anti-Inflammatory", "Boosts Immunity", "Supports Digestion"],
@@ -346,7 +347,7 @@ export default function Home() {
       id: 23,
       name: "Dandelion Tea",
       category: "Teas",
-      price: "₦2,600",
+      price: "₦3,000",
       description:
         "A herbal tea with a slightly earthy flavor that supports liver detoxification and digestive health.",
       benefits: ["Liver Detox", "Digestive Aid", "Supports Weight Management"],

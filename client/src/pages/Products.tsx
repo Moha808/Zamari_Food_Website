@@ -29,6 +29,9 @@ import product21 from "@/assets/images/product-10.jpg";
 import product22 from "@/assets/images/product-19.jpg";
 import product23 from "@/assets/images/product-14.jpg";
 import product24 from "@/assets/images/product-12.jpg";
+import product25 from "@/assets/images/product-23.jpeg";
+import product19 from "@/assets/images/product-22.jpeg";
+import product15 from "@/assets/images/product-22.jpeg";
 import logo from "@/assets/images/logo.jpg";
 import heroImage from "@/assets/images/hero-3.png";
 
@@ -269,19 +272,19 @@ export default function Products() {
       image: product14,
       color: "from-green-50 to-emerald-50",
     },
-    // {
-    //   id: 15,
-    //   name: "Rich B Tea",
-    //   category: "Teas",
-    //   price: "₦4,000",
-    //   description: "A premium herbal blend for vitality, wellness, and strength.",
-    //   longDescription:
-    //     "Rich B Tea is a fortified herbal drink crafted to enhance vitality, energy, and immune strength. Made from natural roots and herbs traditionally used for wellness and stamina.",
-    //   benefits: ["Energy", "Vitality", "Immune Support", "Wellness"],
-    //   ingredients: ["Herbal Roots", "Spices"],
-    //   // image: product16,
-    //   color: "from-blue-50 to-indigo-50",
-    // },
+    {
+      id: 15,
+      name: "Rich B Tea",
+      category: "Teas",
+      price: "₦4,000",
+      description: "A premium herbal blend for vitality, wellness, and strength.",
+      longDescription:
+        "Rich B Tea is a fortified herbal drink crafted to enhance vitality, energy, and immune strength. Made from natural roots and herbs traditionally used for wellness and stamina.",
+      benefits: ["Energy", "Vitality", "Immune Support", "Wellness"],
+      ingredients: ["Herbal Roots", "Spices"],
+      image: product25,
+      color: "from-blue-50 to-indigo-50",
+    },
     {
       id: 16,
       name: "Tamba Mix Flour 500g",
@@ -310,32 +313,32 @@ export default function Products() {
       image: product7,
       color: "from-amber-50 to-orange-50",
     },
-    //   {
-    //   id: 18,
-    //   name: "Ginger Powder 75g",
-    //   category: "Powders",
-    //   price: "₦2,000",
-    //   description: "Pure ginger powder for tea, cooking, and natural remedies.",
-    //   longDescription:
-    //     "Ginger Powder 75g offers a strong, aromatic spice ideal for boosting digestion, immunity, and flavor. Perfect for tea, seasoning, and healthy home remedies.",
-    //   benefits: ["Digestive Health", "Anti-inflammatory", "Immune Support", "Natural Flavor"],
-    //   ingredients: ["Pure Ginger Root"],
-    //   // image: product19,
-    //   color: "from-yellow-50 to-orange-50",
-    // },
-    // {
-    //   id: 19,
-    //   name: "Ginger Powder 200g",
-    //   category: "Powders",
-    //   price: "₦4,000",
-    //   description: "A larger pack of pure ginger powder for daily use.",
-    //   longDescription:
-    //     "Ginger Powder 200g provides more value for families and regular users. Excellent for cooking, herbal tea, digestion, immunity, and overall wellness.",
-    //   benefits: ["Anti-inflammatory", "Digestion", "Immune Support", "Natural Wellness"],
-    //   ingredients: ["Pure Ginger Root"],
-    //   // image: product20,
-    //   color: "from-yellow-50 to-orange-50",
-    // },
+      {
+      id: 18,
+      name: "Ginger Powder 75g",
+      category: "Powders",
+      price: "₦2,000",
+      description: "Pure ginger powder for tea, cooking, and natural remedies.",
+      longDescription:
+        "Ginger Powder 75g offers a strong, aromatic spice ideal for boosting digestion, immunity, and flavor. Perfect for tea, seasoning, and healthy home remedies.",
+      benefits: ["Digestive Health", "Anti-inflammatory", "Immune Support", "Natural Flavor"],
+      ingredients: ["Pure Ginger Root"],
+      image: product19,
+      color: "from-yellow-50 to-orange-50",
+    },
+    {
+      id: 19,
+      name: "Ginger Powder 200g",
+      category: "Powders",
+      price: "₦4,000",
+      description: "A larger pack of pure ginger powder for daily use.",
+      longDescription:
+        "Ginger Powder 200g provides more value for families and regular users. Excellent for cooking, herbal tea, digestion, immunity, and overall wellness.",
+      benefits: ["Anti-inflammatory", "Digestion", "Immune Support", "Natural Wellness"],
+      ingredients: ["Pure Ginger Root"],
+      image: product15,
+      color: "from-yellow-50 to-orange-50",
+    },
     {
       id: 20,
       name: "Lemon Grass Ginger & Lemon Tea",
