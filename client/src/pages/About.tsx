@@ -458,15 +458,20 @@ export default function About() {
             <div>
               <h3 className="font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Facebook
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                </a> */}
+                <a
+                  href="https://www.instagram.com/zamarifoods/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white"
+                >
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Twitter
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -87,7 +87,7 @@ export default function Products() {
       id: 3,
       name: "Sweet Potato Flour 1kg",
       category: "Grains & Flours",
-      price: "₦4000",
+      price: "₦4,000",
       description:
         "Premium processed sweet potato flour for healthy baking and cooking.",
       longDescription:
@@ -102,7 +102,7 @@ export default function Products() {
       id: 4,
       name: "Tamba Mix Flour 1kg",
       category: "Grains & Flours",
-      price: "₦4000",
+      price: "₦4,000",
       description:
         "Premium processed tamba mix flour for healthy baking and cooking.",
       longDescription:
@@ -277,7 +277,8 @@ export default function Products() {
       name: "Rich B Tea",
       category: "Teas",
       price: "₦4,000",
-      description: "A premium herbal blend for vitality, wellness, and strength.",
+      description:
+        "A premium herbal blend for vitality, wellness, and strength.",
       longDescription:
         "Rich B Tea is a fortified herbal drink crafted to enhance vitality, energy, and immune strength. Made from natural roots and herbs traditionally used for wellness and stamina.",
       benefits: ["Energy", "Vitality", "Immune Support", "Wellness"],
@@ -289,7 +290,7 @@ export default function Products() {
       id: 16,
       name: "Tamba Mix Flour 500g",
       category: "Grains & Flours",
-      price: "₦2000",
+      price: "₦2,000",
       description:
         "Premium processed tamba mix flour for healthy baking and cooking.",
       longDescription:
@@ -313,7 +314,7 @@ export default function Products() {
       image: product7,
       color: "from-amber-50 to-orange-50",
     },
-      {
+    {
       id: 18,
       name: "Ginger Powder 75g",
       category: "Powders",
@@ -321,7 +322,12 @@ export default function Products() {
       description: "Pure ginger powder for tea, cooking, and natural remedies.",
       longDescription:
         "Ginger Powder 75g offers a strong, aromatic spice ideal for boosting digestion, immunity, and flavor. Perfect for tea, seasoning, and healthy home remedies.",
-      benefits: ["Digestive Health", "Anti-inflammatory", "Immune Support", "Natural Flavor"],
+      benefits: [
+        "Digestive Health",
+        "Anti-inflammatory",
+        "Immune Support",
+        "Natural Flavor",
+      ],
       ingredients: ["Pure Ginger Root"],
       image: product19,
       color: "from-yellow-50 to-orange-50",
@@ -334,7 +340,12 @@ export default function Products() {
       description: "A larger pack of pure ginger powder for daily use.",
       longDescription:
         "Ginger Powder 200g provides more value for families and regular users. Excellent for cooking, herbal tea, digestion, immunity, and overall wellness.",
-      benefits: ["Anti-inflammatory", "Digestion", "Immune Support", "Natural Wellness"],
+      benefits: [
+        "Anti-inflammatory",
+        "Digestion",
+        "Immune Support",
+        "Natural Wellness",
+      ],
       ingredients: ["Pure Ginger Root"],
       image: product15,
       color: "from-yellow-50 to-orange-50",
@@ -765,15 +776,20 @@ export default function Products() {
             <div>
               <h3 className="font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Facebook
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                </a> */}
+                <a
+                  href="https://www.instagram.com/zamarifoods/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white"
+                >
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Twitter
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

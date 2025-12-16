@@ -189,7 +189,7 @@ export default function Home() {
       image: product8,
       color: "from-amber-50 to-yellow-50",
     },
-      {
+    {
       id: 9,
       name: "Ginger Powder 75g",
       category: "Powders",
@@ -266,7 +266,7 @@ export default function Home() {
       image: product15,
       color: "from-gray-50 to-slate-50",
     },
-     {
+    {
       id: 16,
       name: "Rich B Tea",
       category: "Teas",
@@ -792,7 +792,7 @@ export default function Home() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="flex-1 bg-orange-600 hover:bg-orange-700"
+                  className="flex-1 bg-orange-600 hover:bg-orange-700 w-full h-14 text-lg"
                 >
                   Submit Order
                 </Button>
@@ -806,7 +806,7 @@ export default function Home() {
                     type="button"
                     size="lg"
                     variant="outline"
-                    className="w-full border-green-500 text-green-600 hover:bg-green-50"
+                    className="w-full border-green-500 text-green-600 hover:bg-green-50 h-14 text-lg"
                   >
                     <MessageCircle className="mr-2" size={20} />
                     Chat on WhatsApp
@@ -859,15 +859,20 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Facebook
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                </a> */}
+                <a
+                  href="https://www.instagram.com/zamarifoods/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white"
+                >
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Twitter
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

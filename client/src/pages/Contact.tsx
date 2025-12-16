@@ -64,7 +64,7 @@ export default function Contact() {
               </div>
             </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <Link
@@ -92,7 +92,7 @@ export default function Contact() {
               Contact
             </Link>
           </div>
-          
+
           {/* WhatsApp Button & Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
             <a
@@ -104,7 +104,7 @@ export default function Contact() {
               <MessageCircle size={18} />
               <span className="hidden sm:inline">WhatsApp</span>
             </a>
-            
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -115,7 +115,7 @@ export default function Contact() {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-orange-100 shadow-lg">
@@ -545,15 +545,20 @@ export default function Contact() {
             <div>
               <h3 className="font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Facebook
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                </a> */}
+                <a
+                  href="https://www.instagram.com/zamarifoods/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white"
+                >
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                {/* <a href="#" className="text-gray-400 hover:text-white">
                   Twitter
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
