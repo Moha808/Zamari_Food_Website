@@ -168,17 +168,17 @@ export default function Home() {
       image: product6,
       color: "from-yellow-50 to-orange-50",
     },
-    {
-      id: 7,
-      name: "Acha Grain Fonio 1kg",
-      category: "Grains & Flours",
-      price: "₦4,000",
-      description:
-        "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
-      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
-      image: product7,
-      color: "from-amber-50 to-orange-50",
-    },
+    // {
+    //   id: 7,
+    //   name: "Acha Grain Fonio 1kg",
+    //   category: "Grains & Flours",
+    //   price: "₦4,000",
+    //   description:
+    //     "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+    //   benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
+    //   image: product7,
+    //   color: "from-amber-50 to-orange-50",
+    // },
     {
       id: 8,
       name: "Tigernut Powder 250g",
@@ -301,7 +301,7 @@ export default function Home() {
     },
     {
       id: 19,
-      name: "Acha Flour Fonio 1kg",
+      name: "Acha Grain Fonio 1kg",
       category: "Grains & Flours",
       price: "₦4,500",
       description:
