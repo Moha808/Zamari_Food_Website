@@ -118,7 +118,7 @@ export default function Home() {
       id: 2,
       name: "Achalina Fonio Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4,500",
       description:
         "Nutritious acha-based cereal mix ideal for both children and adults.",
       benefits: ["Energy", "Easy to Digest", "Nutrient-Rich"],
@@ -299,17 +299,17 @@ export default function Home() {
       image: product4,
       color: "from-green-50 to-lime-50",
     },
-    {
-      id: 19,
-      name: "Acha Grain Fonio 1kg",
-      category: "Grains & Flours",
-      price: "₦4,500",
-      description:
-        "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
-      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
-      image: product7,
-      color: "from-amber-50 to-orange-50",
-    },
+    // {
+    //   id: 19,
+    //   name: "Acha Grain Fonio 1kg",
+    //   category: "Grains & Flours",
+    //   price: "₦4,500",
+    //   description:
+    //     "Premium processed acha grain rich in fiber, minerals, and natural energy, ideal for porridge, swallow, and healthy meals.",
+    //   benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
+    //   image: product7,
+    //   color: "from-amber-50 to-orange-50",
+    // },
     {
       id: 20,
       name: "Lemon Grass Ginger & Lemon Tea",

@@ -67,7 +67,7 @@ export default function Products() {
       id: 2,
       name: "Achalina Fonio Flour",
       category: "Grains & Flours",
-      price: "₦1,500",
+      price: "₦4,500",
       description:
         "A nutritious blend of fonio flour and Achalina leaf for enhanced flavor and wellness.",
       longDescription:
@@ -153,20 +153,20 @@ export default function Products() {
       color: "from-yellow-50 to-orange-50",
     },
 
-    {
-      id: 7,
-      name: "Acha Grain Fonio 1kg",
-      category: "Grains & Flours",
-      price: "₦4,000",
-      description:
-        "Premium processed acha grain rich in fiber, minerals, and natural energy.",
-      longDescription:
-        "Acha Grain, also known as Fonio, is one of Africa’s oldest and most nutritious ancient grains. Naturally gluten-free and rich in fiber, iron, and essential amino acids, it provides clean, sustained energy and supports healthy digestion. Acha cooks quickly and is perfect for porridge, swallow, cereals, and a variety of healthy recipes.",
-      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
-      ingredients: ["Acha Grain (Fonio)"],
-      image: product7,
-      color: "from-amber-50 to-orange-50",
-    },
+    // {
+    //   id: 7,
+    //   name: "Acha Grain Fonio 1kg",
+    //   category: "Grains & Flours",
+    //   price: "₦4,000",
+    //   description:
+    //     "Premium processed acha grain rich in fiber, minerals, and natural energy.",
+    //   longDescription:
+    //     "Acha Grain, also known as Fonio, is one of Africa’s oldest and most nutritious ancient grains. Naturally gluten-free and rich in fiber, iron, and essential amino acids, it provides clean, sustained energy and supports healthy digestion. Acha cooks quickly and is perfect for porridge, swallow, cereals, and a variety of healthy recipes.",
+    //   benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
+    //   ingredients: ["Acha Grain (Fonio)"],
+    //   image: product7,
+    //   color: "from-amber-50 to-orange-50",
+    // },
 
     {
       id: 8,
@@ -300,20 +300,20 @@ export default function Products() {
       image: product4,
       color: "from-green-50 to-lime-50",
     },
-    {
-      id: 17,
-      name: "Acha Grain Fonio 1kg",
-      category: "Grains & Flours",
-      price: "₦4,500",
-      description:
-        "Premium processed acha grain rich in fiber, minerals, and natural energy.",
-      longDescription:
-        "Acha Grain, also known as Fonio, is one of Africa’s oldest and most nutritious ancient grains. Naturally gluten-free and rich in fiber, iron, and essential amino acids, it provides clean, sustained energy and supports healthy digestion. Acha cooks quickly and is perfect for porridge, swallow, cereals, and a variety of healthy recipes.",
-      benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
-      ingredients: ["Acha Grain (Fonio)"],
-      image: product7,
-      color: "from-amber-50 to-orange-50",
-    },
+    // {
+    //   id: 17,
+    //   name: "Acha Grain Fonio 1kg",
+    //   category: "Grains & Flours",
+    //   price: "₦4,500",
+    //   description:
+    //     "Premium processed acha grain rich in fiber, minerals, and natural energy.",
+    //   longDescription:
+    //     "Acha Grain, also known as Fonio, is one of Africa’s oldest and most nutritious ancient grains. Naturally gluten-free and rich in fiber, iron, and essential amino acids, it provides clean, sustained energy and supports healthy digestion. Acha cooks quickly and is perfect for porridge, swallow, cereals, and a variety of healthy recipes.",
+    //   benefits: ["High Fiber", "Energy", "Gluten-Free", "Easy to Digest"],
+    //   ingredients: ["Acha Grain (Fonio)"],
+    //   image: product7,
+    //   color: "from-amber-50 to-orange-50",
+    // },
     {
       id: 18,
       name: "Ginger Powder 75g",
