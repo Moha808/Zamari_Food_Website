@@ -15,7 +15,7 @@ import heroImage from "@/assets/images/hero-2.png";
 export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const whatsappNumber = "+234 803 564 9771";
+  const whatsappNumber = "2348035649771";
   const whatsappMessage =
     "Hello Zamari Foods! I'd like to know more about your company.";
 
@@ -450,8 +450,8 @@ export default function About() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li>Phone: +234 803 564 9771</li>
-                <li>Email: zamarifoods@gmail.com</li>
+                <li>+234 803 564 9771 / +234 903 605 9950</li>
+                <li>Email: Zamarifoods356@gmail.com</li>
                 <li>Location: Jos, Nigeria</li>
               </ul>
             </div>

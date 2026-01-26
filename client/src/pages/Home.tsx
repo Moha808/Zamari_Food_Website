@@ -374,7 +374,7 @@ export default function Home() {
       ? products.filter(p => p.category === selectedCategory)
       : products;
 
-  const whatsappNumber = "+234 803 564 9771"; // Replace with actual WhatsApp number
+  const whatsappNumber = "2348035649771"; // Replace with actual WhatsApp number
   const whatsappMessage =
     "Hello Zamari Foods! I'm interested in your products.";
 
@@ -851,8 +851,8 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li>Phone: +234 803 564 9771</li>
-                <li>Email: zamarifoods@gmail.com</li>
+                <li>+234 803 564 9771 / +234 903 605 9950</li>
+                <li>Email: Zamarifoods356@gmail.com</li>
                 <li>Location: Jos, Nigeria</li>
               </ul>
             </div>

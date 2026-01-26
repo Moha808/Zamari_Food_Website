@@ -22,7 +22,7 @@ export default function Contact() {
   });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const whatsappNumber = "+234 803 564 9771";
+  const whatsappNumber = "2348035649771";
   const whatsappMessage = "Hello Zamari Foods! I have a question.";
 
   const handleInputChange = (
@@ -217,12 +217,12 @@ export default function Contact() {
               <p className="text-gray-700 mb-4">
                 Send us your inquiries via email
               </p>
-              <a href="mailto:zamarifoods@gmail.com">
+              <a href="mailto:Zamarifoods356@gmail.com">
                 <Button
                   variant="outline"
                   className="w-full border-blue-300 text-blue-600 hover:bg-blue-50"
                 >
-                  zamarifoods@gmail.com
+                  Zamarifoods356@gmail.com
                 </Button>
               </a>
             </CardContent>
@@ -244,7 +244,7 @@ export default function Contact() {
                   variant="outline"
                   className="w-full border-red-300 text-red-600 hover:bg-red-50"
                 >
-                  +234 803 564 9771
+                  +2348035649771 or +2349036059950
                 </Button>
               </a>
             </CardContent>
@@ -364,7 +364,7 @@ export default function Contact() {
                   <p className="text-sm font-semibold text-gray-600 mb-1">
                     Address
                   </p>
-                  <p className="text-gray-900">Jos, Nigeria</p>
+                  <p className="text-gray-900">Federal Ministry For Science and Technology, Angwan Dabba, Jos, Plateau State, Nigeria.</p>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-600 mb-1">
@@ -373,7 +373,7 @@ export default function Contact() {
                   <p className="text-gray-900">
                     Monday - Friday: 8:00 AM - 5:00 PM
                   </p>
-                  <p className="text-gray-900">Saturday: 9:00 AM - 2:00 PM</p>
+                  <p className="text-gray-900">Saturday: 8:00 AM - 2:00 PM</p>
                   <p className="text-gray-900">Sunday: Closed</p>
                 </div>
                 <div>
@@ -537,8 +537,8 @@ export default function Contact() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li>Phone: +234 803 564 9771</li>
-                <li>Email: zamarifoods@gmail.com</li>
+                <li>+234 803 564 9771 / +234 903 605 9950</li>
+                <li>Email: Zamarifoods356@gmail.com</li>
                 <li>Location: Jos, Nigeria</li>
               </ul>
             </div>
